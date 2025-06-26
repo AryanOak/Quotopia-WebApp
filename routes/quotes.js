@@ -128,5 +128,19 @@ router.post('/:quoteId/dislike', auth, async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 });
+// GET: Trending quotes (top 10 by likes)
+router.get('/trending', async (req, res) => {
+  try {
+    // sort by number of likes (descending), limit to 10
+    const quotes = await Quote.find()
+      .populate('user', 'username profilePhoto')
+      .sort({ 'likedBy.length': -1 })
+      .limit(10);
+    res.json(quotes);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
 
 module.exports = router;
