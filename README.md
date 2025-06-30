@@ -6,7 +6,7 @@
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Browse & Filter**  
   View all quotes on the Home page, filter by category (Motivational, Philosophical, Spiritual, Funny, None).
@@ -32,7 +32,7 @@
 
 ---
 
-## 🔧 Tech Stack
+##  Tech Stack
 
 - **Frontend:** React, React Router, Axios, CSS  
 - **Backend:** Node.js, Express, MongoDB (Mongoose)  
@@ -41,13 +41,13 @@
 
 ---
 
-## 🖥️ Project Demo
+##  Project Demo
 
 [ https://www.linkedin.com/posts/aryanoak_quotopia-fullstackdevelopment-mernstack-activity-7344036851868925952-fxrt?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD2UbI0B5ayr1TKWYv5gAS3nGoc5NdmxKHI ]
 
 ---
 
-## 📦 Getting Started
+##  Getting Started
 
 1. **Clone the repo**  
    ```bash
