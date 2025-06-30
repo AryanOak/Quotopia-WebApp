@@ -1,4 +1,5 @@
-# Quotopia
+# Quotopia: Your New Go-To Quotes Universe! 📝
+
 
 > “Words carry power. Share yours.”  
 > Have you ever needed a spark of inspiration, a burst of laughter, or a moment of self realization —right at your fingertips? That’s exactly why I built Quotopia, a full-stack passion project powered by the MERN technology, to help anyone unlock the power of quotes in a seamless, delightful way. 
