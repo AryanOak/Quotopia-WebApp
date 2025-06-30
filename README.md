@@ -1,7 +1,8 @@
 # Quotopia
 
 > “Words carry power. Share yours.”  
-> A sleek, responsive MERN‑stack quote web app where users can share, browse, and interact with quotes—one powerful line at a time.
+> Have you ever needed a spark of inspiration, a burst of laughter, or a moment of self realization —right at your fingertips? That’s exactly why I built Quotopia, a full-stack passion project powered by the MERN technology, to help anyone unlock the power of quotes in a seamless, delightful way. 
+
 
 ---
 
@@ -35,10 +36,10 @@
 
 ## 🔧 Tech Stack
 
-- **Frontend:** React, React Router, Axios, CSS Modules (flex & grid layouts)  
+- **Frontend:** React, React Router, Axios, CSS  
 - **Backend:** Node.js, Express, MongoDB (Mongoose)  
 - **Auth:** JWT (JSON Web Tokens)  
-- **Dev Tools:** ESLint, Prettier  
+- **Dev Tools:** ESLint
 
 ---
 
