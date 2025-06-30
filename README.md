@@ -29,8 +29,6 @@
 - **Profiles & Editing**  
   Personal profile page with uploadable photo, editable username and headline quote. View your own quotes or anyone else’s.
 
-- **Responsive & Animated**  
-  Fully mobile‑first design with hamburger menus, slide‑down panels, fade‑in page transitions, and square‑card layouts for consistency.
 
 ---
 
