@@ -1,0 +1,90 @@
+/* src/components/ViewProfile.css */
+.view-profile-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+  }
+  
+  .view-profile-container .profile-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: #f6f6f6;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .view-profile-container .profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+  
+  .view-profile-container .profile-placeholder {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+  
+  .view-profile-container .profile-info h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .view-profile-container .profile-info .headline {
+    margin-top: 0.5rem;
+    color: #777;
+  }
+  
+  .view-profile-container .profile-quotes h3 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .view-profile-container .profile-quotes p {
+    color: #555;
+  }
+
+  /* MOBILE VIEW PROFILE */
+  @media (max-width: 768px) {
+    .view-profile-container {
+      margin: 1rem;
+      padding: 0.75rem;
+    }
+    .view-profile-container .profile-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .view-profile-container .profile-photo,
+    .view-profile-container .profile-placeholder {
+      width: 80px;
+      height: 80px;
+      margin-right: 0;
+      margin-bottom: 0.75rem;
+    }
+    .view-profile-container .profile-info h2 {
+      font-size: 1.3rem;
+    }
+    .view-profile-container .profile-info .headline {
+      font-size: 0.9rem;
+    }
+  }
+  

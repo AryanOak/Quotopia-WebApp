@@ -1,0 +1,98 @@
+/* src/components/QuoteCard.css */
+.quote-card {
+  background: #fff;
+  border: 1px solid #5b5a5a;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+/* User info */
+.quote-user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.quote-user-photo,
+.quote-user-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+.quote-user-photo {
+  object-fit: cover;
+}
+.quote-user-placeholder {
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.quote-user-name {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Text */
+.quote-text {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.quote-category {
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: capitalize;
+}
+
+/* Actions */
+.quote-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.quote-actions button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.quote-actions button:hover {
+  background: #333;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+/* Delete button */
+.delete-button {
+  background: #c00 !important;
+}
+.delete-button:hover {
+  background: #a00 !important;
+}
+
+/* MOBILE QUOTE CARD */
+@media (max-width: 768px) {
+  .quote-card {
+    margin: 0 0.5rem 1.25rem 0.5rem;
+    padding: 0.85rem;
+  }
+  .quote-text {
+    font-size: 1rem;
+  }
+  .quote-actions button {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}

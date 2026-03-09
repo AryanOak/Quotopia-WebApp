@@ -1,0 +1,309 @@
+/* ====== HOME CONTAINER ====== */
+.home-container {
+  min-height: calc(100vh - 60px);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.8s ease;
+}
+
+.home-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.all-quotes {
+  margin: 0;
+  font-size: 1.6rem;
+  transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+/* ====== MUTE BUTTON ====== */
+.mute-btn {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: background 0.3s, transform 0.2s;
+  flex-shrink: 0;
+}
+.mute-btn:hover {
+  background: rgba(255,255,255,0.25);
+  transform: scale(1.1);
+}
+
+/* ====== QUOTES GRID ====== */
+.quotes-grid {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+/* ====== CARD ENTRANCE ANIMATION ====== */
+.quote-card-wrapper {
+  animation: cardSlideIn 0.5s ease both;
+}
+
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====== DEFAULT THEME (All) ====== */
+.theme-default {
+  background: transparent;
+}
+.theme-default .all-quotes {
+  color: #222;
+}
+
+/* ====== FLOATING PARTICLES ====== */
+.theme-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: floatParticle 9s ease-in-out infinite;
+}
+
+.particle:nth-child(1) { left: 8%;  top: 15%; }
+.particle:nth-child(2) { left: 25%; top: 55%; }
+.particle:nth-child(3) { left: 50%; top: 30%; }
+.particle:nth-child(4) { left: 72%; top: 65%; }
+.particle:nth-child(5) { left: 88%; top: 12%; }
+.particle:nth-child(6) { left: 40%; top: 82%; }
+.particle:nth-child(7) { left: 15%; top: 45%; }
+.particle:nth-child(8) { left: 62%; top: 8%;  }
+
+@keyframes floatParticle {
+  0%   { opacity: 0;   transform: translateY(0) scale(1); }
+  20%  { opacity: 0.6; }
+  50%  { opacity: 0.35; transform: translateY(-70px) scale(1.6); }
+  80%  { opacity: 0.5; }
+  100% { opacity: 0;   transform: translateY(-140px) scale(0.7); }
+}
+
+/* ======================================================================
+   MOTIVATIONAL — Deep Midnight Blue
+   ====================================================================== */
+.theme-motivational {
+  background: linear-gradient(160deg, #060d1f 0%, #0c1a3a 40%, #0f2550 70%, #071228 100%);
+}
+.theme-motivational .all-quotes {
+  color: #60a5fa;
+  text-shadow: 0 0 30px rgba(96, 165, 250, 0.25);
+  animation: subtleGlow-blue 3s ease-in-out infinite alternate;
+}
+.theme-motivational .particle {
+  background: #3b82f6;
+  box-shadow: 0 0 12px #3b82f6;
+}
+.theme-motivational .quote-card {
+  background: rgba(12, 26, 58, 0.9);
+  border: 1px solid rgba(96, 165, 250, 0.15);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 24px rgba(59, 130, 246, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.theme-motivational .quote-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.2);
+  border-color: rgba(96, 165, 250, 0.4);
+}
+.theme-motivational .quote-user-name { color: #93bbfc; }
+.theme-motivational .quote-text { color: #d4e2f7; }
+.theme-motivational .quote-category { color: #60a5fa; }
+.theme-motivational .quote-user-placeholder { background: #1e3a6e; color: #93bbfc; }
+.theme-motivational .quote-actions button {
+  background: #1e40af;
+  transition: background 0.2s, transform 0.15s;
+}
+.theme-motivational .quote-actions button:hover {
+  background: #2563eb;
+  transform: scale(1.05);
+}
+
+@keyframes subtleGlow-blue {
+  from { text-shadow: 0 0 20px rgba(96, 165, 250, 0.15); }
+  to   { text-shadow: 0 0 40px rgba(96, 165, 250, 0.4); }
+}
+
+/* ======================================================================
+   PHILOSOPHICAL — Deep Royal Purple
+   ====================================================================== */
+.theme-philosophical {
+  background: linear-gradient(160deg, #0d0520 0%, #170a38 40%, #1e1050 70%, #0b0420 100%);
+}
+.theme-philosophical .all-quotes {
+  color: #a78bfa;
+  text-shadow: 0 0 30px rgba(167, 139, 250, 0.25);
+  animation: subtleGlow-purple 3s ease-in-out infinite alternate;
+}
+.theme-philosophical .particle {
+  background: #8b5cf6;
+  box-shadow: 0 0 12px #8b5cf6;
+}
+.theme-philosophical .quote-card {
+  background: rgba(23, 10, 56, 0.9);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 24px rgba(139, 92, 246, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.theme-philosophical .quote-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.2);
+  border-color: rgba(167, 139, 250, 0.4);
+}
+.theme-philosophical .quote-user-name { color: #c4b5fd; }
+.theme-philosophical .quote-text { color: #e0d6f7; }
+.theme-philosophical .quote-category { color: #a78bfa; }
+.theme-philosophical .quote-user-placeholder { background: #2e1065; color: #c4b5fd; }
+.theme-philosophical .quote-actions button {
+  background: #5b21b6;
+  transition: background 0.2s, transform 0.15s;
+}
+.theme-philosophical .quote-actions button:hover {
+  background: #7c3aed;
+  transform: scale(1.05);
+}
+
+@keyframes subtleGlow-purple {
+  from { text-shadow: 0 0 20px rgba(167, 139, 250, 0.15); }
+  to   { text-shadow: 0 0 40px rgba(167, 139, 250, 0.4); }
+}
+
+/* ======================================================================
+   SPIRITUAL — Deep Saffron / Burnt Copper
+   ====================================================================== */
+.theme-spiritual {
+  background: linear-gradient(160deg, #1a0a05 0%, #2d1208 40%, #451a0a 70%, #1a0805 100%);
+}
+.theme-spiritual .all-quotes {
+  color: #f97316;
+  text-shadow: 0 0 30px rgba(249, 115, 22, 0.25);
+  animation: subtleGlow-saffron 3s ease-in-out infinite alternate;
+}
+.theme-spiritual .particle {
+  background: #ea580c;
+  box-shadow: 0 0 12px #ea580c;
+}
+.theme-spiritual .quote-card {
+  background: rgba(45, 18, 8, 0.9);
+  border: 1px solid rgba(249, 115, 22, 0.15);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 24px rgba(234, 88, 12, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.theme-spiritual .quote-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(249, 115, 22, 0.2);
+  border-color: rgba(249, 115, 22, 0.4);
+}
+.theme-spiritual .quote-user-name { color: #fdba74; }
+.theme-spiritual .quote-text { color: #fed7aa; }
+.theme-spiritual .quote-category { color: #f97316; }
+.theme-spiritual .quote-user-placeholder { background: #7c2d12; color: #fdba74; }
+.theme-spiritual .quote-actions button {
+  background: #9a3412;
+  transition: background 0.2s, transform 0.15s;
+}
+.theme-spiritual .quote-actions button:hover {
+  background: #c2410c;
+  transform: scale(1.05);
+}
+
+@keyframes subtleGlow-saffron {
+  from { text-shadow: 0 0 20px rgba(249, 115, 22, 0.15); }
+  to   { text-shadow: 0 0 40px rgba(249, 115, 22, 0.4); }
+}
+
+/* ======================================================================
+   FUNNY — Deep Warm Yellow
+   ====================================================================== */
+.theme-funny {
+  background: linear-gradient(160deg, #1a1600 0%, #2a2200 40%, #383000 70%, #1a1600 100%);
+}
+.theme-funny .all-quotes {
+  color: #fbbf24;
+  text-shadow: 0 0 30px rgba(251, 191, 36, 0.25);
+  animation: subtleGlow-yellow 3s ease-in-out infinite alternate;
+}
+.theme-funny .particle {
+  background: #fbbf24;
+  box-shadow: 0 0 12px #fbbf24;
+}
+.theme-funny .quote-card {
+  background: rgba(42, 34, 0, 0.9);
+  border: 1px solid rgba(251, 191, 36, 0.15);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 24px rgba(251, 191, 36, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.theme-funny .quote-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(251, 191, 36, 0.2);
+  border-color: rgba(251, 191, 36, 0.4);
+}
+.theme-funny .quote-user-name { color: #fde68a; }
+.theme-funny .quote-text { color: #fef3c7; }
+.theme-funny .quote-category { color: #fbbf24; }
+.theme-funny .quote-user-placeholder { background: #5c4a00; color: #fde68a; }
+.theme-funny .quote-actions button {
+  background: #92700a;
+  transition: background 0.2s, transform 0.15s;
+}
+.theme-funny .quote-actions button:hover {
+  background: #b7900d;
+  transform: scale(1.05);
+}
+
+@keyframes subtleGlow-yellow {
+  from { text-shadow: 0 0 20px rgba(251, 191, 36, 0.15); }
+  to   { text-shadow: 0 0 40px rgba(251, 191, 36, 0.4); }
+}
+
+/* ====== MOBILE ====== */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 0.75rem;
+  }
+  .all-quotes {
+    font-size: 1.3rem;
+  }
+  .mute-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+  }
+}

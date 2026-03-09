@@ -1,0 +1,18 @@
+.trendQuote {
+  margin-left: 1rem;
+}
+
+.trending-container {
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .trendQuote {
+    margin-left: 0.75rem;
+    font-size: 1.3rem;
+  }
+  .trending-container {
+    padding: 0.25rem;
+  }
+}
