@@ -4,8 +4,6 @@ const router = express.Router();
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 
-const JWT_SECRET = "your_jwt_secret_key"; // Store in env variables in production
-
 // Signup Route
 router.post('/signup', async (req, res) => {
   const { username, email, password } = req.body;
@@ -37,7 +35,7 @@ router.post('/login', async (req, res) => {
       return res.status(400).json({ message: 'Invalid credentials' });
     }
     // Create JWT token
-    const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: '1h' });
+    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
     res.json({ token, username: user.username });
   } catch (error) {
     console.error(error);
