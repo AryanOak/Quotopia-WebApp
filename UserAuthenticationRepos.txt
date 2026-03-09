@@ -1,0 +1,5 @@
+https://github.com/edsonayllon/MERN-Authentication.git
+https://github.com/rishipr/mern-auth
+https://github.com/elyse502/mern-auth?tab=readme-ov-file
+https://github.com/Roshan-Metrix/MERN_Authentication
+https://github.com/hagopj13/node-express-boilerplate
