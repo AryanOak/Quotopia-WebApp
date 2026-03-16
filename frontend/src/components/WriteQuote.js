@@ -8,7 +8,7 @@ const WriteQuote = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     text: '',
-    category: 'none',
+    category: 'motivational',
   });
   const [error, setError] = useState('');
 
@@ -51,11 +51,10 @@ const WriteQuote = () => {
           placeholder="Type your quote here (max 200 characters)..."
           value={formData.text}
           onChange={handleChange}
-          maxLength="170"
+          maxLength="200"
           required
         />
         <select name="category" value={formData.category} onChange={handleChange}>
-          {/* <option value="none">None</option> */}
           <option value="motivational">Motivational</option>
           <option value="philosophical">Philosophical</option>
           <option value="spiritual">Spiritual</option>

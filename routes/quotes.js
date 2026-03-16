@@ -5,16 +5,28 @@ const auth = require('../middleware/auth');
 const Quote = require('../models/Quote');
 const User = require('../models/User');
 
+const ALLOWED_CREATE_CATEGORIES = ['motivational', 'philosophical', 'spiritual', 'funny'];
+
 // POST: Create a new quote (protected)
 router.post('/', auth, async (req, res) => {
-  const { text, category } = req.body;
+  const { text } = req.body;
+  const normalizedCategory = typeof req.body.category === 'string'
+    ? req.body.category.trim().toLowerCase()
+    : '';
+
   if (!text || text.length > 200) {
     return res.status(400).json({ message: 'Quote must be provided and be no more than 200 characters.' });
   }
+  if (!ALLOWED_CREATE_CATEGORIES.includes(normalizedCategory)) {
+    return res.status(400).json({
+      message: 'Please select a valid category: motivational, philosophical, spiritual, or funny.'
+    });
+  }
+
   try {
     const quote = new Quote({
       text,
-      category,
+      category: normalizedCategory,
       user: req.user.userId,
     });
     await quote.save();
